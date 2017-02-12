@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.shiv.androidui.MainActivity">
+
+    <ImageView
+        android:id="@+id/bgImage"
+        android:scaleType="fitXY"
+        android:background="@mipmap/background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/headerArea"
+        android:layout_above="@+id/lowerHalf"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <TextView
+            android:id="@+id/trainNumber"
+            android:text="SuperTrain A163"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:padding="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/currentlyLabel"
+            android:text="currently:"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:textColor="#AAAAAA"
+            android:layout_above="@id/trainNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/bookButton"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="#D2486F"
+            android:text="Book"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/trainName"
+            android:background="#6F839A"
+            android:textColor="#FFFFFF"
+            android:padding="5dp"
+            android:text="12:30 Leaving Austin to Los Angeles"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lowerHalf"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#86C664"
+        android:orientation="vertical"
+        android:weightSum="32"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"/>
+
+        <LinearLayout
+            android:id="@+id/arrowsArea"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:weightSum="32"
+            android:orientation="horizontal"
+            android:layout_weight="10">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/upArrow"
+                android:src="@mipmap/arrowup"
+                android:scaleType="fitCenter"
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/upText"
+                android:text="NorthBound 50min"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/downArrow"
+                android:src="@mipmap/arrowdown"
+                android:scaleType="fitCenter"
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/downText"
+                android:text="SouthBound 50min"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"/>
+
+        <LinearLayout
+            android:id="@+id/gpsArea"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:weightSum="32"
+            android:orientation="horizontal"
+            android:layout_weight="10">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/gpsPic"
+                android:src="@mipmap/gps"
+                android:scaleType="fitCenter"
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/gpsText"
+                android:text="You Are 10min Away"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/newsPic"
+                android:src="@mipmap/news"
+                android:scaleType="fitCenter"
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/newsText"
+                android:text="Warning: Morning Delays"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
